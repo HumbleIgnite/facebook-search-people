@@ -1,84 +1,59 @@
-[Facebook Search People](https://apify.com/patient_discovery/facebook-search-people?fpr=data)
+[Facebook Search People](https://apify.com/data-slayer/facebook-search-people?fpr=data)
 
-# **Facebook People Scraper - No Login Required**
+Extract Facebook profile data at scale without authentication or cookies. This scraper enables sales teams to build comprehensive prospect databases by searching for people on Facebook and collecting publicly available profile information — no login credentials required.
 
-## **What does this scraper do?**
+## 📺 Video Tutorial: How it Works
 
-This actor extracts Facebook profile search results based on a keyword query.
+[Video](https://www.youtube.com/embed/NOnfFO9N248?enablejsapi=1&rel=0)
 
-Enter a search term, run the actor, and receive structured profile data including names, profile URLs, verification status, and profile images.
+---
 
-No Facebook login, no cookies, no session handling required.
+## Key Features
 
-Cookieless architecture ensures stable, risk-free, and scalable automation.
+🔒 **Cookieless / No Login Required** - Access public Facebook profile data without authentication, eliminating account suspension risks and credential management overhead.
 
-## **Why scrape Facebook people search results?**
+📈 **Scalable Architecture** - Process multiple search queries simultaneously to build extensive prospect databases across different industries, locations, and demographics.
 
-Facebook search allows discovery of professionals, entrepreneurs, and niche audiences based on keywords. This helps sales and marketing teams to:
+✅ **Rich Profile Data** - Extract profile IDs, names, URLs, verification status, and high-resolution profile pictures with complete metadata.
 
-- Build targeted prospect lists
-- Discover decision-makers in specific industries
-- Identify verified public profiles
-- Analyze audience segments by role or niche
-- Expand outreach campaigns with structured profile data
-- Enrich CRM systems with public profile information
-- Perform competitive intelligence research
+⚡ **Fast & Reliable** - Optimized scraping engine delivers consistent results with minimal latency, perfect for time-sensitive lead generation campaigns.
 
-Its cookieless design fits scalable data pipelines without needing Facebook accounts.
+📊 **Export-Ready Formats** - Download data in JSON, CSV, or Excel formats for immediate integration with CRM systems, marketing automation tools, and analytics platforms.
 
-## **How much will scraping cost?**
+## Use Cases
 
-The pricing for this actor is **$2.50 per 1,000 scraped results**. Refer to the pricing page.
+**Sales Professionals**: Build targeted prospect lists by searching for decision-makers in specific industries or roles. Export contact details directly into your CRM to accelerate pipeline generation and reduce manual research time.
 
-Because this actor does not require login or session management, it reduces operational complexity and lowers the risk associated with account-based scraping. This predictable architecture keeps your data pipelines highly stable.
+**Marketing Analysts**: Gather demographic and profile data to understand audience segments, analyze competitor followings, and identify influencers or brand advocates for partnership opportunities.
 
-## **How to use the scraper**
+**Business Development Teams**: Discover potential partners, clients, or collaborators by searching relevant keywords and industries. Create comprehensive databases of prospects with verified profile information for outreach campaigns.
 
-Here is a **step-by-step guide**:
-
-**Step 1: Open the actor:** Go to your Apify Console and open the scraper.
-
-**Step 2: Enter your input parameters:** In the input field, enter your target search term in the `query` field (e.g., "marketing manager", "tech entrepreneur", "CEO").
-
-**Step 3: Configure extraction depth:** Adjust optional parameters if available to control the number of results.
-
-**Step 4: Start the run:** Click Start to begin scraping. The actor will fetch publicly available profile search results.
-
-**Step 5: Export or integrate:** Once complete, download the dataset in JSON, CSV, or connect it via API to your CRM or marketing automation tools.
-
-## **Input parameters**
-
-Below are the configuration options you can use to control the scraper.
-
-**Input example**
-
-```
-{
-  "query": "digital marketing"
-}
-```
+## Inputs
 
 | Field | Type | Description |
 | --- | --- | --- |
-| query | String | Keyword used to search for Facebook profiles |
+| query | String | Search term or keyword to find Facebook profiles (e.g., "marketing manager", "tech entrepreneur") |
 
-## **What data does this scraper extract?**
+## Outputs
 
-**Formats**: JSON, CSV, Excel
+**Available Formats**: JSON, CSV, Excel
 
 **Extracted Fields**:
 
 - `type` - Record type identifier (search_profile)
 - `profile_id` - Unique Facebook profile identifier
 - `url` - Direct link to the Facebook profile
-- `name` - Profile display name
-- `is_verified` - Verification status
-- `profile_picture.uri` - Profile image URL
-- `profile_picture.width` - Image width
-- `profile_picture.height` - Image height
-- `profile_picture.scale` - Image scale factor
+- `name` - Display name of the profile
+- `is_verified` - Verification status (true/false)
+- `profile_picture` - Object containing profile image URI, dimensions (width/height), and scale factor
 
-All data is returned as structured JSON with null-safe fields for reliable downstream processing.
+## How to Use
+
+**Step 1**: Enter your search term in the `query` field (e.g., "digital marketing", "software engineer", "CEO").
+
+**Step 2**: Configure any additional parameters based on your scraping needs.
+
+**Step 3**: Run the scraper and download results in your preferred format (JSON, CSV, or Excel) for immediate use in your sales or marketing workflows.
 
 ## Sample Output
 
@@ -90,7 +65,7 @@ All data is returned as structured JSON with null-safe fields for reliable downs
   "name": "Sarah Thompson",
   "is_verified": true,
   "profile_picture": {
-    "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-1/392847561_742156389841521_583729516104253892_n.jpg",
+    "uri": "https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-1/profile_pic.jpg",
     "width": 120,
     "height": 120,
     "scale": 2
@@ -98,40 +73,22 @@ All data is returned as structured JSON with null-safe fields for reliable downs
 }
 ```
 
-All data is delivered in structured JSON format suitable for lead generation, prospect database building, sales intelligence workflows, and audience research initiatives.
+## 🧩 Other Facebook Actors by Data Slayer
 
-## **Key Features:**
+| Actor | What it does | Link |
+| --- | --- | --- |
+| Facebook Page Search Scraper | Search and discover Facebook pages by keyword | [Try it](https://apify.com/data-slayer/facebook-search-pages) |
+| Facebook Page Details Scraper | Get full page profiles — followers, contact info, ratings | [Try it](https://apify.com/data-slayer/facebook-page-details) |
+| Facebook Posts Scraper | Extract posts from any Facebook page | [Try it](https://apify.com/data-slayer/facebook-page-posts) |
+| Facebook Group Posts Scraper | Extract posts from any public Facebook group | [Try it](https://apify.com/data-slayer/facebook-group-posts) |
+| Facebook Reviews Scraper | Extract customer reviews from any Facebook page | [Try it](https://apify.com/data-slayer/facebook-page-reviews) |
+| Facebook Events Scraper | Discover Facebook events by keyword search | [Try it](https://apify.com/data-slayer/facebook-search-events) |
+| Facebook Marketplace Listing Scraper | Extract detailed listing data from Facebook Marketplace | [Try it](https://apify.com/data-slayer/facebook-marketplace-details) |
 
-- 📈 Extract Facebook profile search results by keyword
-- 📊 Capture verification status and profile image metadata
-- ⚡ Structured JSON output ready for analytics and automation
-- 📈 Discover public profiles for outreach and prospecting
-- 📊 Export-ready formats including JSON, CSV, and Excel
-- ⚡ Scalable architecture for bulk people search extraction
-- 🔒 Fully cookieless architecture with no login required
+## 💬 Feedback and Support
 
-## **FAQs**
+We actively maintain this actor and ship improvements based on user feedback. If you run into any issues or have ideas for new features:
 
-**Does this scraper require Facebook login?** No. It is fully cookieless and does not require login credentials.
-
-**Can it scrape private profiles?** No. Only publicly accessible profile search data can be extracted.
-
-**Can I run multiple search queries?** Yes. Execute separate runs for different keywords or integrate via API for bulk prospect discovery.
-
-**Other Facebook scrapers that you may find useful:**
-
-[Facebook Page Search Scraper](https://apify.com/patient_discovery/facebook-search-pages)
-
-[Facebook Group Posts Scraper](https://apify.com/patient_discovery/facebook-group-posts)
-
-[Facebook Search Events Scraper](https://apify.com/patient_discovery/facebook-search-events)
-
-[Facebook Page Details Scraper](https://apify.com/patient_discovery/facebook-page-details)
-
-[Facebook Marketplace Details Scraper](https://apify.com/patient_discovery/facebook-marketplace-details)
-
-[Facebook Page Reviews Scraper](https://apify.com/patient_discovery/facebook-page-reviews)
-
-[Facebook Page Posts Scraper](https://apify.com/patient_discovery/facebook-page-posts)
-
-[Facebook Search People Scraper](https://apify.com/patient_discovery/facebook-search-people)
+- Create an issue on the Actor's **Issues tab** in Apify Console
+- Rate the actor if it helped you — it helps others find it too
+We typically respond within 24 hours.
