@@ -1,68 +1,73 @@
-[Facebook Search People](https://apify.com/monumental_world/facebook-search-people?fpr=data)
+[Facebook Search People](https://apify.com/iron-crawler/facebook-search-people?fpr=data)
 
-"# Facebook People Export to Excel (Cookieless)
+"# Facebook People Scraper (No Login Required)
 
-## Need to download Facebook data to Excel? This tool helps you do exactly that.
+## What does Facebook People Scraper (No Login Required) do?
 
-Whether you're a sales professional, agency owner, or business developer, this tool makes it easy to export Facebook people data directly into Excel, CSV, or XML format—no technical skills or Facebook login required. Perfect for building prospect lists, researching potential leads, and growing your sales pipeline.
+This tool extracts public profile data from Facebook without requiring authentication or cookies. Built with a **No Login / Cookieless** architecture, it bypasses the traditional barriers of session management and account restrictions, allowing you to gather professional contact information and profile details at scale. Whether you're building lead lists or researching market segments, this scraper operates reliably without the risk of account bans or login complications.
 
-## Step-by-Step Guide
+**Key Features:**
 
-**Step 1:** Enter your search term or keyword (for example, ""insights"" or any topic related to your target audience).
+- Scrape public Facebook profiles without authentication
+- Extract contact details, occupation, and company information
+- Export data to JSON, CSV, or Excel formats
+- Filter results by location and professional criteria
+- Track profile activity timestamps
+- Process multiple search queries in batch mode
+- No rate limiting from account-based restrictions
 
-**Step 2:** Click ""Start"" to begin the export. No login or cookies required—the tool works completely independently.
+## Why scrape Facebook?
 
-**Step 3:** Download your data as Excel, CSV, or XML. Open it in Excel, Google Sheets, or your favorite spreadsheet tool and start working with your data immediately.
+Sales professionals want to scrape contact details of potential leads across multiple platforms to build comprehensive prospect databases and accelerate pipeline generation. Facebook remains one of the largest repositories of professional and personal contact information, making it invaluable for outreach campaigns and market intelligence.
 
-## What columns will I get?
+**Primary Use Cases:**
 
-Your download will include the following columns:
+- **Lead Generation:** Build targeted prospect lists by searching for professionals in specific industries, locations, or job titles to fuel your sales pipeline with qualified contacts.
+- **Market Research:** Analyze demographic patterns, professional distributions, and geographic concentrations to identify untapped market opportunities and competitive landscapes.
+- **Recruitment Intelligence:** Source potential candidates by extracting profiles matching specific skill sets, experience levels, and location preferences for talent acquisition teams.
 
-- **Person ID** - Unique identifier for each person
-- **First Name** - Contact's first name
-- **Last Name** - Contact's last name
-- **Email Address** - Email contact information
-- **Phone Number** - Phone contact details
-- **Job Title** - Professional position
-- **Department Name** - Department or team
-- **Hire Date** - Employment start date
-- **Salary Amount** - Compensation information
-- **Manager Name** - Direct supervisor
-- **Office Location City** - Geographic location
-- **Employment Status** - Current employment status
+## How to scrape Facebook using this tool?
 
-## How to use this data
+**Step 1:** Identify your search criteria. Determine the keywords, job titles, or industry terms that match your target audience (e.g., ""software engineer San Francisco"" or ""marketing director"").
 
-Here are three simple ways to put your exported data to work:
+**Step 2:** Configure the input parameters. Enter your search query in the `query` field. Plan your extraction volume accordingly: **1 search query ≈ 50-100 profiles** depending on result availability.
 
-1. **Build Your Sales Pipeline**: Import contacts directly into your CRM or sales database to create a comprehensive list of qualified prospects. Filter by job title, department, or location to prioritize your outreach.
-2. **Accelerate Lead Generation**: Use the contact details to reach out to potential customers via email or phone. Sort by employment status and hire date to identify decision-makers who might be ready for your solution.
-3. **Create Targeted Prospect Lists**: Export multiple searches and combine them in Excel to build segmented lists based on industry, role, or location. Perfect for personalized marketing campaigns and account-based selling strategies.
+**Step 3:** Run the scraper and download your data. Once the extraction completes, export your results in JSON, CSV, or Excel format for immediate use in your CRM or outreach tools.
 
-## Input Settings
+## What are the input parameters?
 
-**Query (Search Term or Keyword)**: This is what you're searching for on Facebook. Enter any keyword, topic, or phrase that relates to your target audience.
+| Field | Type | Description |
+| --- | --- | --- |
+| `query` | String | Search term or keyword to find Facebook profiles (e.g., ""insights"", ""product manager"", ""real estate agent Boston""). Supports job titles, industries, locations, or any combination of search terms. |
 
-*Example*: If you're looking for people interested in marketing insights, enter ""insights"" or ""marketing professionals"" as your search term. The tool will find relevant profiles based on your keyword.
+## What data can you extract?
 
-## Frequently Asked Questions
+You can download the following data in JSON, CSV, or Excel formats:
 
-**Q: Do I need a Facebook account?**
+```
+{
+  ""search_id"": ""sr_789456123"",
+  ""full_name"": ""Michael Chen"",
+  ""profile_url"": ""https://people.search.com/mchen"",
+  ""location"": ""San Francisco, CA"",
+  ""occupation"": ""Software Engineer"",
+  ""company"": ""TechCorp Inc."",
+  ""email_hash"": ""mchen_sf@example.com"",
+  ""last_active"": ""2025-12-15T08:30:22Z""
+}
+```
 
-A: No! This tool works without requiring you to log in or have a Facebook account. It's completely cookieless.
+**Available Fields:**
 
-**Q: Can I open this in Google Sheets?**
-
-A: Yes, absolutely! Just upload the CSV file to Google Sheets and you can work with your data in the cloud.
-
-**Q: How many profiles can I export at once?**
-
-A: You can customize the number of results based on your needs. Simply adjust your settings before starting the export.
-
-**Q: Is this data ready to use immediately?**
-
-A: Yes! The Excel or CSV file is formatted and ready to open. You can start filtering, sorting, and analyzing right away.
+- `search_id`: Unique identifier for the search result
+- `full_name`: Complete name of the profile owner
+- `profile_url`: Direct link to the Facebook profile
+- `location`: Geographic location (city and state/country)
+- `occupation`: Current job title or professional role
+- `company`: Current employer or organization
+- `email_hash`: Contact email (when publicly available)
+- `last_active`: Timestamp of most recent profile activity
 
 ---
 
-*Keywords: people search scraper, profile data extractor, social media scraper, lead generation scraper, export profiles, professional profile scraping, people finder tool*"
+This **people search scraper** and **profile data extractor** serves as a powerful **social media scraper** for teams focused on **lead generation**. Use this **people finder tool** to **export profiles** efficiently, enabling **professional profile scraping** at scale without the complexity of traditional authentication methods."
